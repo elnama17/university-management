@@ -2,7 +2,6 @@ package model.person;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-
 import model.Course;
 import util.Enums.StudentDegree;
 
@@ -45,14 +44,6 @@ public class Student extends Person {
     public void setThesisTitle(String thesisTitle) { this.thesisTitle = thesisTitle; }
     public void setInternshipCompleted(boolean internshipCompleted) { this.internshipCompleted = internshipCompleted; }
     public void setTA(boolean TA) { this.TA = TA; }
-
-    public boolean addCourse(Course course) {
-        if (course != null) {
-            courses.add(course);
-            return true;
-        }
-        return false;
-    }
 
     // Can be moved to StudentService.java
     public boolean withdrawFromCourse(int courseId) {
